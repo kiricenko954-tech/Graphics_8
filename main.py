@@ -78,7 +78,6 @@ class ImageInterpolationApp:
         info_frame.pack(fill=tk.X, pady=(10, 0))
 
     def open_image(self):
-        """Загрузка изображения"""
         file_path = filedialog.askopenfilename(
             title="Выберите изображение",
             filetypes=[("PPM файлы", "*.ppm"), ("Все файлы", "*.*")]
@@ -114,7 +113,6 @@ class ImageInterpolationApp:
             showinfo("Ошибка", f"Не удалось загрузить изображение: {e}")
 
     def display_original_image(self):
-        """Отображение исходного изображения на canvas"""
         if not self.original_image_data:
             return
 
@@ -178,7 +176,6 @@ class ImageInterpolationApp:
         if canvas_height <= 10:
             canvas_height = 400
 
-        # Отступ, чтобы не прилипало к краям
         canvas_width -= 20
         canvas_height -= 20
 
